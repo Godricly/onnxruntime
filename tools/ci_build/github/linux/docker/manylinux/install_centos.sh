@@ -14,8 +14,7 @@ yum install -y redhat-lsb-core expat-devel libcurl-devel tar unzip curl zlib-dev
 if [ "$os_major_version" == "6" ]; then
     # See https://github.com/dotnet/core/blob/master/Documentation/build-and-install-rhel6-prerequisites.md
     yum install -y epel-release libunwind openssl libnghttp2 libidn krb5-libs libuuid lttng-ust zlib
-    curl -sSL -o /tmp/1.tgz https://github.com/unicode-org/icu/releases/download/release
-    -57-1/icu4c-57_1-RHEL6-x64.tgz
+    curl -sSL -o /tmp/1.tgz https://github.com/unicode-org/icu/releases/download/release-57-1/icu4c-57_1-RHEL6-x64.tgz
     tar -xf /tmp/1.tgz -C /
     mv /usr/local/lib /usr/local/lib64
     ldconfig /usr/local/lib64
